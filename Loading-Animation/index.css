@@ -3,7 +3,7 @@ body{
     margin:0;
     width:100%;
     height:100vh;
-    background:radial-gradient(yellow, orange);/*#9b59b6, #8e44ad*/
+    background:radial-gradient(#9b59b6, #8e44ad);
     /*radial-gradient是一个函数，用来创造由原点辐射开的颜色渐变*/
 }
 .wrapper{
@@ -12,17 +12,24 @@ body{
     position: absolute;
     left:50%;
     top:50%;
-    transform: translate(-50%, -50%);
+
+    transform: translate(-50%, -50%);/*transform: translate(x,y)属性定义2D转换*/
 }
 .circle{
     width:20px;
     height:20px;
     position: absolute;
     border-radius: 50%;
+    /*圆形*/
     background-color: #fff;
     left:15%;
-    transform-origin: 50%;
-    animation: circle .5s alternate infinite ease;
+    /*⬆️针对有定位的祖先元素的宽高*/
+    /*transform-origin: 50%; */
+    /*⬆️设置旋转元素的基点位置*/ 
+    animation: circle 0.5s alternate infinite ease;
+    /*⬆️alternate：animation-direction属性，表示动画应该轮流反向播放；
+    infinite：animation-iteration-count，表示动画无限次播放
+    ease：animation-timing-function：表示动画速度曲线先慢后快再慢*/
 }
 
 @keyframes circle{
@@ -30,15 +37,15 @@ body{
         top:60px;
         height:5px;
         border-radius: 50px 50px 25px 25px;
-        transform: scaleX(1.7);
+        transform: scaleX(1.2);
+        /*反弹一瞬间，定义球体在x轴的缩放比例*/
     }
     40%{
         height:20px;
-        border-radius: 50%;
         transform: scaleX(1);
     }
     100%{
-        top:0%;
+        top:0;
     }
 }
 .circle:nth-child(2){
@@ -60,7 +67,7 @@ body{
     transform-origin: 50%;
     z-index: -1;
     left:15%;
-    filter: blur(1px);
+    filter: blur(1px);/*filter是滤镜属性，blur表示设置高斯模糊*/
     animation: shadow .5s alternate infinite ease;
 }
 
@@ -86,109 +93,64 @@ body{
     right:15%;
     animation-delay: .3s;
 }
-.wrapper span{
+span:nth-child(1){
     position: absolute;
-    top:75px;
+    top:90px;
     font-family: 'Lato';
     font-size: 20px;
     letter-spacing: 12px;
     color: #fff;
     left:15%;
 }
-
-
-
-
-
-
-
-/*  footer   */
-/*footer {
-    background-color: #222;
-    color: #fff;
-    font-size: 14px;
-    bottom: 0;
-    position: fixed;
-    left: 0;
+.dot{
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: white;
+    position: absolute;
     right: 0;
-    text-align: center;
-    z-index: 999;
+    top: 103px;
+    margin-left: -10px;
+    animation: dots 0.8s infinite linear;
+}
+span:nth-child(2){
+    right: -20px;
+    animation-delay: 0.4s; 
+}
+span:nth-child(3){
+    left: auto;
+    right: -40px;
+    animation-delay: 0.6s; 
+}
+span:nth-child(4){
+    animation-delay: 0.2s; 
 }
 
-footer p {
-    margin: 10px 0;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida  Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-footer .fa-heart{
-    color: red;
-}
-footer .fa-dev{
-    color: #fff;
-}
-footer .fa-twitter-square{
-  color:#1da0f1;
-}
-footer .fa-instagram{
-  color: #f0007c;
-}
-fotter .fa-linkedin{
-  color:#0073b1;
-}
-footer .fa-codepen{
-  color:#fff
-}
-footer a {
-    color: #3c97bf;
-    text-decoration: none;
-  margin-right:5px;
-}
-.youtubeBtn{
-    position: fixed;
-    left: 50%;
-  transform:translatex(-50%);
-    bottom: 45px;
-    cursor: pointer;
-    transition: all .3s;
-    vertical-align: middle;
-    text-align: center;
-    display: inline-block;
-}
-.youtubeBtn i{
-   font-size:20px;
-  float:left;
-}
-.youtubeBtn a{
-    color:#ff0000;
-    animation: youtubeAnim 1000ms linear infinite;
-  float:right;
-}
-.youtubeBtn a:hover{
-  color:#c9110f;
-  transition:all .3s ease-in-out;
-  text-shadow: none;
-}
-.youtubeBtn i:active{
-  transform:scale(.9);
-  transition:all .3s ease-in-out;
-}
-.youtubeBtn span{
-    font-family: 'Lato';
-    font-weight: bold;
-    color: #fff;
-    display: block;
-    font-size: 12px;
-    float: right;
-    line-height: 20px;
-    padding-left: 5px;
-  
+@keyframes dots{
+    0% {
+        background-color: rgba(255,255,255,0)
+    }
+    50% {
+        background-color: rgba(255,255,255,0.4)
+    }
+    100%{
+        background-color: rgba(255,255,255,1)
+    }
 }
 
-@keyframes youtubeAnim{
-  0%,100%{
-    color:#c9110f;
-  }
-  50%{
-    color:#ff0000;
-  }
-}*/
-/* footer  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
