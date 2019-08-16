@@ -8,4 +8,4 @@ loading-animation页面卡顿等待动画：
 
 text-jumping 文字跳跃CSS动画
 
-访问地址：https://xiamo12.github.io/CSSProject/text-jumping/index.html
+访问地址：https://xiamo12.github.io/CSSProject/text-jump/index.html
