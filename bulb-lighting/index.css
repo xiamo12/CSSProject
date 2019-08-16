@@ -19,10 +19,10 @@ h1{
 .bulb-area2{
 	width: 142px;
 	height: 0;
-	margin: -12px auto 0 auto;
 	border-left: 16px solid transparent;
 	border-right: 16px solid transparent;
 	border-top: 40px solid #807d7d;
+	margin: -12px auto 0 auto;
 	position: relative;
 	transition: 0.6s;
 }
@@ -64,7 +64,6 @@ h1{
 	background: #694b8b;
 	width: 120px;
 	height: 16px;
-	/*padding: 0;*/
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -75,7 +74,6 @@ h1{
 }
 .bulb-neck2{
 	margin: -1px auto 0px;
-	/*padding: 0;*/
 	width: 75px;
 	height: 0;
 	border-left: 25px solid transparent;
