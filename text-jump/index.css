@@ -3,26 +3,28 @@ html, body {
   height: 100%;
   margin: 0;
   background: #2d303a;
-  overflow-y: hidden;
+  /*overflow-y: hidden;*/
 }
 
-.bounce {
+.box {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: center; /*align-items表示项目在纵轴上的对齐方式*/
+  justify-content: center;/*justify-content表示项目在横轴上的对齐方式*/
   width: 100%;
-	color: white;
   height: 100%;
-  font: normal bold 6rem "Product Sans", sans-serif;
-  white-space: nowrap;
+  color: white;
+  /*font: bold 6rem "Product Sans", sans-serif;*/
 }
 
 .letter {
-  animation: bounce 0.75s cubic-bezier(0.05, 0, 0.2, 1) infinite alternate;
-  display: inline-block;
-  transform: translate3d(0, 0, 0);
-  margin-top: 0.5em;
-  text-shadow: rgba(255, 255, 255, 0.4) 0 0 0.05em;
+  animation: bounce 0.75s ease infinite alternate;
+  /*⬆️cubic-bezier(0.05, 0, 0.2, 1)：cubic-bezier是transition、animation当中控制变化的速度曲线，
+  格式是cubic-bezier(x1,y1,x2,y2)；
+  cubic-bezier有四个点：两个默认点(0,0)、(1,1)；两个我们设置的点p1(x1,y1),p2(x2,y2)*/
+  /*display: inline-block;*/
+  /*transform: translate3d(0, 0, 0);*/
+  /*margin-top: 0.5em;*/
+  /*text-shadow: rgba(255, 255, 255, 0.4) 0 0 0.05em;*/
   font: normal 500 6rem 'Varela Round', sans-serif;
 }
 
